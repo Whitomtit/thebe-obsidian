@@ -46,7 +46,7 @@ export function renderCell(element, options) {
   // render a single cell
   // element should be a `<pre>` tag with some code in it
   let mergedOptions = mergeOptions({ options });
-  let $cell = $("<div class='thebe-cell thebelab-cell'/>");
+  let $cell = $("<div class='thebe-cell thebelab-cell hljs'/>");
   let $element = $(element);
   let $output = $element.next(mergedOptions.outputSelector);
   let source = $element.text().trim();
