@@ -3,6 +3,10 @@ export * from "./thebe";
 export * from "./utils";
 import $ from "jquery";
 
+// Modes inclusion for webpack
+function requireAll(r) { r.keys().forEach(r); }
+requireAll(require.context('codemirror/mode', true, /\.js$/));
+
 if (typeof window !== "undefined") {
   window.thebelab = window.thebe = thebe;
   window.thebelab.$ = window.thebe.$ = $;
